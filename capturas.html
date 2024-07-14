@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Alpacaland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body { font-family: sans-serif;}
+#font {
+  max-width: 100%;
+  height: 500px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 3px 5px 10px black;
+}
+
+#image {
+  max-width: 100%;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  box-shadow: 3px 5px 10px black;
+}
+
+.box {
+  display: flex;
+  max-width: 100%;
+  width: 2000px;
+}
+
+</style>
+</head>
+<body>
+<center>
+<h1>Capturas</h1>
+<img class="image" id="font" src="image/mundito.png" /><br/><br/>
+<hr/>
+
+<div class="box">
+<div class="boxx">
+<img class="image" id="image" src="image/enderman.jpeg" />
+<img class="image" id="image" src="image/mar.jpeg" />
+</div>
+</div>
+</center>
+
+
+<script>
+window.onload = function() {
+  let img = document.getElementsByClassName('image');
+
+  for (let i = 0; i < img.length; i++) {
+    img[i].addEventListener('click', function() {
+      openImage(this.src)
+    });
+  }
+};
+
+function openImage(src) {
+  window.open(src, "_self");
+}
+</script>
+</body>
+</html>
+
