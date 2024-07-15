@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Alpacaland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+body { font-family: sans-serif, monospace; }
+main { max-width: 900px; line-height: 1.6; margin: auto; }
+span { font-size: 15px; }
+#acep { display: flex; justify-content: center; border: 1px solid black; max-width: 200px; border-radius: 10px; cursor: pointer; }
+</style>
+</head>
+
+<body>
+<main>
+<h1>MISION: JUZGADO</h1>
+<p>
+Nuestra misión es construir un juzgado impresionante en Minecraft, que no solo sirva como un lugar para resolver disputas y administrar justicia, sino que también se convierta en un símbolo de equidad y orden en nuestro mundo virtual. Utilizando materiales cuidadosamente seleccionados y diseños arquitectónicos inspiradores, nos comprometemos a crear una estructura que refleje la seriedad y la dignidad de un tribunal real. Nuestro juzgado contará con una sala de audiencias, oficinas para jueces y abogados, así como áreas públicas para que los ciudadanos puedan observar los procedimientos judiciales. A través de este proyecto, buscamos fomentar un entorno donde la justicia y la imparcialidad prevalezcan, y donde cada jugador sienta que sus derechos están protegidos y respetados.
+</p>
+<img src="https://siip3.institutopacifico.pe/assets/uploads/noticias/FEBD7FD3CCF520A43D6FB0D7FBB7E896_1671806211_original.png" /><br/><br/><br/>
+
+<div id="acep" onclick="accept()">aceptas la mision mi king?</div>
+
+
+</main>
+<script>
+function accept() {
+  let aceptar = document.getElementById('acep');
+  let color = aceptar.style.backgroundColor = "#77dd77";  
+  localStorage.setItem('mision1', color);
+  alert("habra recompensa");
+}
+
+window.onload = function() {
+  let get_color = localStorage.getItem("mision1");
+  if (get_color) {
+    let aceptar = document.getElementById('acep');
+    let color = aceptar.style.backgroundColor = "#77dd77";  
+  }
+}
+
+</script>
+</body>
+</html>
