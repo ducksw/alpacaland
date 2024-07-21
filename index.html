@@ -18,15 +18,52 @@ span { font-size: 15px; }
 <h1 style="font-size: 70px; margin: 0; font-weight: normal">Alpacaland</h1><br/>
 <h2 style="margin: 0;"><span>2019</span>-<span>2020</span>-<span>2021</span>-<span>2022</span>-<span>2023</span>-<span class="date">2024</span></h2><br/><br/>
 <a href="" onclick="mision()">wiki</a> |
-<a href="misiones.html">misiones</a> |
+<a href="#" onclick="msn()">misiones</a> |
 <!--<a href="capturas.html">Capturas</a> |-->
 <a href="integrantes.html">Integrantes</a> <br/><br/><br/>
+<span id="name" style="font-size: 20px; font-weight: bold;"></span><br/>
 <img style="max-width: 100%; width: 200px;" src="https://i.pinimg.com/originals/b6/e1/1d/b6e11d053e08254e228def1e2151b394.png" /><br/><br/>
+<input type="text" placeholder="Ingrese su nombre" id="input"/>
+<button onclick="login()">Join</button>
 </center>
 
 <script>
 function mision() {
   alert("NO HAY MY CAUSE")
+}
+
+function login() {
+  let input = document.getElementById('input').value;
+  let name = document.getElementById('name')
+  localStorage.setItem('user', input);
+
+  name.innerHTML = input;
+}
+
+function msn() {
+  let user = localStorage.getItem('user');
+
+  if (user) {
+    window.open("misiones.html", "_self");
+  } else {
+    alert("no tiene un nombre");
+  }
+}
+
+document.getElementById('input').addEventListener('keypress', function(event) {
+  if (event.keyCode === 13) {
+    msn();
+  }
+});
+
+
+window.onload = function() {
+  let get_user = localStorage.getItem('user');
+  let name = document.getElementById('name')
+
+  if (get_user) {
+    name.innerHTML = get_user;
+  }
 }
 </script>
 </body>
