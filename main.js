@@ -15,8 +15,9 @@ function ms1() {
 function ms2() {
   let mision2 = document.getElementById('mision2');
   let msg = prompt("Ingrese el codigo");
+  let pwd = "b4qrj6HBoNbBszBNgaeZ7NApPmI6RIxVQZCgwrUC"
 
-  if (msg == "hola") {
+  if (msg == pwd) {
     localStorage.setItem('mis2', mision2)
     mision2.style.backgroundImage = "url(https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5f/Advancement-fancy-worn.png/revision/latest?cb=20200329050401)";
     mision2.style.boxShadow = "0px 0px 10px darkorange";
@@ -29,8 +30,9 @@ function ms2() {
 function ms3() {
   let mision3 = document.getElementById('mision3');
   let msg = prompt("Ingrese el codigo");
+  let pwd = "E2ug9uKu6cTQgvFQBWAVKwkP1I1qY6NtVpXgEQZy";
 
-  if (msg == "hola") {
+  if (msg == pwd) {
     localStorage.setItem('mis3', mision3)
     mision3.style.backgroundImage = "url(https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5f/Advancement-fancy-worn.png/revision/latest?cb=20200329050401)";
     mision3.style.boxShadow = "0px 0px 10px darkorange";
